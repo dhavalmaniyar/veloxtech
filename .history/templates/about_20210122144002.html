@@ -1,0 +1,153 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block body %}
+<style>
+    .navbar {
+        position: sticky;
+    }
+
+    .row {
+        margin: 0px;
+    }
+
+    div.gallery {
+        float: left;
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
+</style>
+
+<body>
+
+    <br>
+
+    <h3 class="text-center"> ABOUT
+        <span style="border-bottom:2px solid rgb(194, 31, 31) ; color: rgb(194, 31, 31) ;">
+            VELOXTECH SOLUTIONS.
+        </span> </h3> <br>
+    <div class="row text-center ">
+        <div class="col-md my-auto">
+            <p class="font-size text-left">To put it simply, we identify and work closely on IT Infrastructure ,
+                Analytics and
+                professional services with OEM's to identify the Pain Points of the client to deliver results for their
+                clients.
+                We do this through a process that melds the best of traditional IT approach and newer trend recognition
+                through
+                predictive analytics. Our Proof of concepts helps start-ups, mid-market and large enterprises find
+                partners that
+                meet their needs, whether for a one-off project or a long term relationship. </p>
+        </div>
+        <div class="col-md ">
+            <img src="{%static '/images/about.gif'%}" style="width:70%;border-radius:20px;" alt="">
+        </div>
+    </div>
+    <hr>
+    <div class="text-center">
+        <br>
+        <h3>OUR <span style="border-bottom:2px solid rgb(194, 31, 31) ; color: rgb(194, 31, 31) ;">STORY</span> </h3>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{%static '/images/story.gif'%}" style="width:70%;border-radius:20px;" alt="">
+            </div>
+            <div class="col-md-6">
+
+                <p class="font-size text-left">VeloxTech Solutions was created to solve an important, two sided problem.
+                    How do buyers
+                    of
+                    IT
+                    Infrastructure, professional services and software find the best Original equipment companies to
+                    meet a
+                    specific
+                    need? And conversely, how do leading Product, services and software firms stand out from the sea of
+                    mediocre
+                    competitors?
+                    As a buyer with a large budget, one option is to hire a Team for research to identify even
+                    expensive,
+                    OEM
+                    standard solutions and practices without prediction of Future Growth V/s ROI. But what if you wanted
+                    to
+                    work
+                    with leading specialists at more nimble, focused companies or had a limited budget?
+                    VeloxTech Solutions was born in 2015 to help solve this problem. Our founders had firsthand
+                    experience
+                    as
+                    both
+                    buyers ,solution architects and sellers of solutions and software and knew there must be a better
+                    way.
+                    We
+                    looked
+                    to both the large, traditional IT research firms and more Disruptive customers for inspiration and
+                    developed
+                    a
+                    new approach that included the best of both worlds.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+    <br>
+    <div class="text-center">
+
+        <h3 style="color:rgb(194, 31, 31) ;">ACHIEVEMENTS</h3>
+        <img src="{%static '/images/cio.jpg'%}" style="width:28rem;" alt="">
+    </div>
+    <hr><br>
+    <h3 class="text-center">OUR <span
+            style="border-bottom:2px solid rgb(194, 31, 31) ; color: rgb(194, 31, 31) ;">OEM'S</span> </h3><br>
+    <div class="container">
+        <div class="row justify-content-center" data-aos="fade-up" style="height:500">
+
+            <div class="gallery m-2 ">
+                <img src="{%static '/images/clients/citrix.png'%}" alt="Cinque Terre" width="100" height="100"
+                    class="image">
+
+            </div>
+            <div class="gallery m-2 ">
+                <img src="{%static '/images/clients/dellemc.png'%}" alt="Cinque Terre" width="100" height="100"
+                    class="image">
+
+            </div>
+            <div class="gallery m-2 ">
+                <img src="{%static '/images/clients/fortinet.png'%}" alt="Cinque Terre" width="100" height="100"
+                    class="image">
+
+            </div>
+            <div class="gallery m-2">
+                <img src="{%static '/images/clients/fujitsu.png'%}" alt="Cinque Terre" width="100" height="100"
+                    class="image">
+
+            </div>
+            <div class="gallery m-2">
+                <img src="{%static '/images/clients/hitachi.png'%}" alt="Cinque Terre" width="100" height="100"
+                    class="image">
+
+            </div>
+            <div class="gallery m-2">
+                <img src="{%static '/images/clients/hp.png'%}" alt="Cinque Terre" width="100" height="100"
+                    class="image">
+
+            </div>
+            <div class="gallery m-2">
+                <img src="{%static '/images/clients/ibm.png'%}" alt="Cinque Terre" width="100" height="100"
+                    class="image">
+
+            </div>
+            <div class="gallery m-2">
+                <img src="{%static '/images/clients/ibm.png'%}" alt="Cinque Terre" width="100" height="100"
+                    class="image">
+
+            </div>
+            <div class="gallery m-2">
+                <img src="{%static '/images/clients/ibm.png'%}" alt="Cinque Terre" width="100" height="100"
+                    class="image">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+{% endblock body %}

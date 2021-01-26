@@ -1,0 +1,455 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block body %}
+<style>
+    .content {
+        position: absolute;
+        left: 6%;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+    .team-content {
+        position: absolute;
+    }
+
+    div.gallery {
+        float: left;
+        width: 150px;
+        height: 180px;
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .gallery:hover .overlay {
+        opacity: 0.8;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-weight: 600;
+    }
+
+
+    .image {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-container video {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .group2 {
+        margin-left: 350px !important;
+    }
+
+    .group1 {
+        margin-right: 350px !important;
+    }
+
+    #slider5 {
+        background-color: rgb(8, 8, 63);
+    }
+
+    .contactus {
+        display: block;
+        width: 100%;
+    }
+
+    .card {
+        background-color: rgb(25, 25, 112, 0.5);
+        border-radius: 10px;
+    }
+
+
+    @media screen and (min-width: 800px) {
+        .desktop {
+            display: none;
+        }
+
+        .slider1 {
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .mobile {
+            display: none;
+        }
+
+    }
+
+    video {
+        object-fit: fill
+    }
+
+    a,
+    a label {
+        cursor: pointer;
+    }
+
+    .font-size {
+        font-size: 1em;
+        letter-spacing: 2px;
+    }
+</style>
+
+<body>
+    {% if message %}
+    <script>
+        window.alert("{{message}}");
+    </script>
+
+    {% endif %}
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide noswipe" id="slider1">
+                <!-- <div class="video-container" style="height: 100vh;">
+                    <video autoplay muted loop class="videoBg">
+                        <source src="{%static '/images/home1.gif'%}" type="video/mp4">
+                    </video>
+                </div> -->
+                <img src="{%static '/images/home1.gif'%}" class="slider1" alt="">
+
+                <div class="content text-white">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <p class="font-size">
+                                VELOXTECH SOLUTIONS IS PROMOTED BY SOME HIGHLY EXPERIENCED PROFESSIONAL DEVELOPERS
+                            </p>
+                            <button class="btn btn-outline-warning ">CHECK NOW</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide noswipe mobile" id="slider2">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 my-auto">
+                        <img src="{%static '/images/icon.png'%}" style="width: 6em" alt="">
+                        <p class="font-size"> The key point is that integrating
+                            relationship management into
+                            everyday work life enables timely discussions around client
+                            needs, often long before a project is fully scoped out. This
+                            allows VeloxTech Solutions to offer early-stage consultancy and naturally
+                            positions you as the trusted advisor of choice when an
+                            opportunity becomes concrete.</p>
+                        <button class="btn btn-outline-warning">CONTACT US</button>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>CIO <span style="border-bottom:2px solid rgb(194, 31, 31) ; color: rgb(194, 31, 31) ;">
+                                CERTIFICATE
+                            </span> </h4>
+                        <img src="{%static '/images/cio.jpg'%}" alt="" style="height:60vh;">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="swiper-slide noswipe desktop" id="slider2">
+                <div class=" justify-content-center">
+                    <img src="{%static '/images/icon.png'%}" style="width: 6em" alt="">
+                    <div>
+                        <br>
+                        <p class="font-size" style="word-spacing: 5px;"> The key point is that integrating
+                            relationship management into
+                            everyday work life enables timely discussions around client
+                            needs, often long before a project is fully scoped out. This
+                            allows VeloxTech Solutions to offer early-stage consultancy and naturally
+                            positions you as the trusted advisor of choice when an
+                            opportunity becomes concrete.</p><br>
+                        <button class="btn btn-outline-warning">CONTACT US</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide noswipe desktop" id="slider2">
+                <div class=" justify-content-center">
+                    <h4>CIO <span style="border-bottom:2px solid rgb(194, 31, 31) ; color: rgb(194, 31, 31) ;">
+                            CERTIFICATE
+                        </span> </h4>
+
+                    <br>
+                    <img src="{%static '/images/cio.jpg'%}" alt="" style="height:60vh;">
+                </div>
+            </div>
+            <div class="swiper-slide noswipe" id="slider3">
+                <div class="video-container">
+                    <!-- <video autoplay muted loop width="100%">
+
+                        <source src="{%static '/images/rocket.mp4'%}" type="video/mp4">
+                    </video> -->
+                    <img src="{%static '/images/rocket.gif'%}" style="width: 100%; height:100vh;" alt="">
+                </div>
+                <div class="content text-white">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1 style="font-size:3rem;">Mission</h1>
+                            <p style=" font-size:1em;letter-spacing:2px;">Core Metric mission is to build an eco-system
+                                of pre-built
+                                industry specific A.I applications at affordable cost to industries across the verticals
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div class="swiper-slide desktop noswipe" id="slider4">
+                <br><br>
+                <img src="{%static '/images/team2.jpg'%}" style="width: 100%; height:100vh;" alt="">
+                <div class="team-content text-white">
+                    <div>
+                        <h3 style="color:rgba(255,255,255,0.7);font-size:3rem;">Team</h3>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="gallery p-2 ">
+                            <img src="{%static '/images/pradeepsir.jpg'%}" alt="Cinque Terre" class="image">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>Pradeep Sreeram</h4>
+                                    <p style="font-size:12px">Co-Founder</p>
+                                    <a href="https://www.linkedin.com/in/pradeepsvln/" target="_blank"><i
+                                            class="fab fa-linkedin fa-2x" style="color: white;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="gallery p-2 ">
+                            <img src="{%static '/images/venusir.jpg'%}" alt="Cinque Terre" class="image">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>Venu Gopal Vemula</h4>
+                                    <p style="font-size:12px">COO</p>
+                                    <a href="https://www.linkedin.com/in/venugopal-vemula-93308341/" target="_blank"><i
+                                            class="fab fa-linkedin fa-2x" style="color: white;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery p-2 ">
+                            <img src="{%static '/images/deepanshusir.JPG'%}" alt="Cinque Terre" class="image">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>Deepanshu Bhinda</h4>
+                                    <p style="font-size:12px">CTO</p>
+                                    <a href="https://www.linkedin.com/in/deepanshubhinda/" target="_blank"><i
+                                            class="fab fa-linkedin fa-2x" style="color: white;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="gallery p-2">
+                            <img src="{%static '/images/partner.jpg'%}" alt="Cinque Terre" class="image">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>F.A Khan</h4>
+                                    <p style="font-size:12px">R & D Lead</p>
+                                    <a href=""><i class="fab fa-linkedin fa-2x" style="color: white;"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="swiper-slide moblie noswipe" id="slider4">
+                <br><br>
+                <img src="{%static '/images/team2.jpg'%}" style="width: 100%; height:100vh;" alt="">
+                <div class="team-content text-white">
+                    <div>
+                        <h3 style="color:rgba(255,255,255,0.7);font-size:3rem;">Team</h3>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="gallery p-2 ">
+                            <img src="{%static '/images/pradeepsir.jpg'%}" alt="Cinque Terre" class="image">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>Pradeep Sreeram</h4>
+                                    <p style="font-size:12px">Co-Founder</p>
+                                    <a href="https://www.linkedin.com/in/pradeepsvln/" target="_blank"><i
+                                            class="fab fa-linkedin fa-2x" style="color: white;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="gallery p-2 group1">
+                            <img src="{%static '/images/venusir.jpg'%}" alt="Cinque Terre" class="image">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>Venu Gopal Vemula</h4>
+                                    <p style="font-size:12px">COO</p>
+                                    <a href="https://www.linkedin.com/in/venugopal-vemula-93308341/" target="_blank"><i
+                                            class="fab fa-linkedin fa-2x" style="color: white;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery p-2 group2">
+                            <img src="{%static '/images/deepanshusir.jpg'%}" alt="Cinque Terre" class="image">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>Deepanshu Bhinda</h4>
+                                    <p style="font-size:12px">CTO</p>
+                                    <a href="https://www.linkedin.com/in/deepanshubhinda/" target="_blank"><i
+                                            class="fab fa-linkedin fa-2x" style="color: white;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="gallery p-2">
+                            <img src="{%static '/images/partner.jpg'%}" alt="Cinque Terre" class="image">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>F.A Khan</h4>
+                                    <p style="font-size:12px">R & D Lead</p>
+                                    <a href=""><i class="fab fa-linkedin fa-2x" style="color: white;"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> -->
+
+            <!-- <div class="swiper-slide noswipe" id="slider5">
+                <div class="contactus">
+
+
+                    <div class="row text-white ">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Contact Us</h5>
+                                    <form action="/submit" method="post">
+                                        {% csrf_token %}
+                                        <div class="form-group row text-left">
+                                            <label for="inputEmail3" class="col-md-2 col-form-label"
+                                                style="font-size: 15px;">Email</label>
+                                            <div class="col-md-10">
+                                                <input type="email" class="form-control" name="email" id="inputEmail3">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row text-left">
+                                            <label for="inputName" class="col-md-2 col-form-label"
+                                                style="font-size: 15px;">Name</label>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" name="name" id="inputName"
+                                                    required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row text-left">
+                                            <div class="col-md-2" style="font-size: 15px;">Comment</div>
+                                            <div class="col-md-10">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                    name="comment" rows="1"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row text-left">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-10">
+                                                <button type="submit" class="btn btn-primary">Send</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class=" text-white ">
+                                <h5>Headquarters</h5>
+                                <p style="font-size:12px;">San Diego, California</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Indore Office:</h5>
+                                    <p style="font-size: 12px; margin:0px;">615, Apollo Premier, Vijay Nagar Sqaure,
+                                        Indore, Madhya
+                                        pradesh, India, 452001</p>
+                                    <a href="https://goo.gl/maps/M2gCncbT3Va9Z2226" style="font-size:12px;"
+                                        target="_blank"><i class="fa fa-map-marker-alt fa-lg"></i> Get directions</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Hyderabad-Address</h5>
+                                    <p style="font-size:12px; margin:0px;">2nd Floor, Adviti Nivas PLOT - 26, near RTO
+                                        Office,
+                                        Chandragiri
+                                        Colony, Trimulgherry, Secunderabad, Telangana 500015</p>
+                                    <a href="https://goo.gl/maps/M2gCncbT3Va9Z2226" style="font-size:12px;"
+                                        target="_blank"><i class="fas fa-map-marker-alt fa-lg"></i> Get directions</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div> -->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            slidesPerView: 1,
+            spaceBetween: 0,
+            effect: 'slide',
+            speed: 800,
+
+            keyboard: {
+                enabled: true,
+            },
+            mousewheel: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+        });
+
+        $(".navbar-brand").click(function () {
+            setTimeout(function () {
+                swiper.slideTo(0);
+            }, 175);
+        })
+
+        $(".nav-item-home").click(function () {
+            setTimeout(function () {
+                swiper.slideTo(0);
+            }, 175);
+        })
+    </script>
+</body>
+{% endblock body %}

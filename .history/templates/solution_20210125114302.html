@@ -1,0 +1,141 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block body %}
+<style>
+    .row {
+        margin: 0px;
+    }
+
+    .navbar {
+        position: sticky;
+    }
+
+    .border-head {
+        border-bottom: 1px solid rgb(194, 31, 31);
+    }
+
+    li::marker {
+        color: rgb(194, 31, 31);
+    }
+</style>
+<div class="container">
+    <br>
+    <h4 class="text-center">CORE-<span class="span-heading ">IT-SOLUTIONS</span></h4><br>
+    <div class="row">
+        <div class="col-md-6">
+            <h5 style="font-weight: 500;"><span class="border-head">Networking Solutions</span> </h5>
+            <p class="font-size text-muted">
+                Is your network secure and performing up to its potential? VeloxTech Solutions
+                can help your business make sure that your network systems are
+                protected and running optimally. Whether you have a small office
+                with 5 employees, or you have a complex network with many
+                locations, VeloxTech Solutions has the experienced engineering staff to guide you
+                to the best solutions. Just some of the areas where we can assist
+                with product selection, configuration and deployment are:
+            </p>
+            <ul>
+                <li>Filewalls</li>
+                <li>Routers</li>
+                <li>Switching</li>
+                <li>WAN Topology Design(MPLS,MetroE,etc.)</li>
+            </ul>
+        </div>
+        <div class="col-md-6 ">
+            <img class="border-circle" src="{%static '/images/solution.gif'%}" style="width:100%" alt="">
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+
+            <h5 style="font-weight: 500;"><span class="border-head">Networking Solutions</span> </h5>
+            <p class="font-size text-muted">
+                In order to build a successful business, you need a solid
+                infrastructure. VeloxTech Solutions solutions can help enable your business to
+                accomplish its goals and let you focus on what you do best. We
+                offer optimization to ensure a consistent user experience that
+                enhances productivity, enhanced functionality and intelligence
+                that can help you grow your revenue, and the ability to automate
+                complex tasks while supporting new application and business
+                requirements. Some of our services include:
+            </p>
+            <ul>
+                <li>Nerwork Consolidation</li>
+                <li>Branch/Remote Office Connectivity</li>
+                <li>Complete Network Security</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h5 style="font-weight: 500;"><span class="border-head">Wireless Solutions</span> </h5>
+            <p class="font-size text-muted">
+                To handle new application requirements, networks will be
+                designed and built with the performance to handle interactive
+                multimedia for many simultaneous users. Enterprise wireless
+                technology solutions currently provide the performance and
+                scalable platforms for businesses today. VeloxTech Solutions can help you create
+                a transparent environment across wired and wireless networks with
+                the performance required for business-critical applications. Some
+                of the solutions we offer include:
+            </p>
+            <ul>
+                <li>Wireless Site Surveys</li>
+                <li>Location Based Services</li>
+                <li>Secure Guest Wireless</li>
+                <li>Wireless VOIP Design</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <hr>
+    <h4 class="text-center"><span class="span-heading ">STORAGE / VIRTUALIZATION</span></h4><br>
+    <div class="row">
+        <div class="col-md-6">
+            <h5>Ensuring Maximum Reliability for Virtualized Applications</h6>
+            <p class="text-muted">
+                
+						As virtualization goes mainstream, the workloads of virtual
+						machines are taking on business critical proportions. Businesses
+						are now seeking to virtualize Tier-1 applications and include
+						cloud infrastructure designs in their IT strategies.
+            </p>
+            <p class="text-muted">
+                
+						Automation of the workplace -Industries with repetitive processes
+						that have traditionally been accomplished with human touch -such
+						as logistics management systems and building automation and
+						security systems -have implemented automated processes to achieve
+						greater efficiency. As more and more companies and industries
+						implement automation, the server's availability becomes more
+                        important.
+            </p>
+            <p class="text-muted">
+                As the workforce and consumers become even more comfortable with
+						technology, and companies use virtualization to make the most out
+						of every process, the risk comes in when any one of these servers
+						involved experiences a problem with availability. Preventing
+						server downtime saves companies and consumers time and money.
+						Recovering from downtime -even the smallest amount -is too costly
+						in an always-on world. As you look to virtualization, the need for
+						bullet-proof reliability increases dramatically.
+            </p>
+            <p class="text-muted"> Whether you're a fully staffed data center in a large
+                enterprise, a small-to-mid-sized business lacking in IT expertise
+                or looking for availability solutions perfect for edge computing
+                we offer a range of virtualization solutions engineered to address
+                your specific requirements. Our solutions enable rapid deployment
+                of always- on infrastructures, from enterprise servers to clouds,
+                without any changes to your applications and without the need for
+                specialized expertise. Our team integrates perpetual monitoring
+                services with always-on hardware and software, and virtualization
+                technologies to deliver the reliability you require for your
+                virtualized environment.</p>
+        </div>
+        <div class="col-md-6 my-auto">
+            <!-- <img src="{%static '/images/storage.gif'%}" style="width: 100%;" alt=""> -->
+            <img src="{%static '/images/storage1.gif'%}" style="width: 100%;" alt="">
+        </div>
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,90 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block body %}
+<style>
+    .navbar {
+        position: sticky;
+    }
+
+    .gallery:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: 0.5s ease;
+        color: white;
+    }
+
+    div.gallery {
+        margin: 4px;
+        border: 2px solid;
+        float: left;
+        width: 400px;
+        background-color: rgb(230, 230, 230);
+        border-radius: 10px;
+    }
+    body{
+        min-height: 100vh;
+    }
+</style>
+<section class="container">
+    <br>
+    <h3 class="text-center">Career Opportunities</h3>
+    <div class="row justify-content-center">
+        {% for careerdata in data %}
+
+        {% if careerdata.isActive == 1 %}
+
+        <div class="gallery p-2 border">
+            <div>
+                <h5><strong>Job opportunity: &nbsp;{{careerdata.opportunity}}</strong>
+                </h5>
+                <hr>
+                <p style="font-size:13px"><strong>Experience:</strong> {{careerdata.experience}} </p>
+                <p style="font-size:13px"><strong>Location:</strong> {{careerdata.location}}</p>
+                <p style="font-size:13px"><strong>Date: </strong>{{careerdata.createdOn}}</p>
+
+
+            </div>
+            <button type="button" class="btn btn-outline-danger" style="margin-left:40%;" data-toggle="modal"
+                data-target="#modal{{careerdata.id}}">
+                Apply
+            </button>
+
+        </div>
+
+        <div class="modal fade bd-example-modal-lg" id="modal{{careerdata.id}}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title heading" id="exampleModalLongTitle">{{careerdata.opportunity}}</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Skills Required:</h6>
+
+                        <p class="content" style="color:grey;font-size: 15px; ">{{careerdata.skills|linebreaksbr}}</p>
+
+                        <h6>Responsibilities:</h6>
+
+                        <p class="content" style="color:grey;font-size: 15px;">
+                            {{careerdata.responsibilities|linebreaksbr }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-outline-danger">
+                        Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endif %}
+        {% endfor%} 
+    </div>
+    <hr>
+
+
+</section>
+{% endblock body %}

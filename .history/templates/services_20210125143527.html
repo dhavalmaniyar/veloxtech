@@ -1,0 +1,31 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block body %}
+<style>
+    .navbar{
+        position: sticky;
+    }
+    .border-head {
+        border-bottom: 1px solid rgb(194, 31, 31);
+    }
+    .row{
+        margin: 0px;
+    }
+</style>
+  <div class="row">
+      <div class="col-md-6">
+          <img src="{%static '/images/staff.gif'%}" style="width: 100%;" alt="">
+      </div>
+      <div class="col-md-6"><br>
+        <h3 class="text-center" style="text-transform:uppercase;word-spacing: 4px; ">The right job at the right place with the right fit is humanly
+            possible.</h3><br>
+            <h4><span class="border-head">What is the Staff Augumentation</span></h4>
+            <p class="text-muted">Staff Augmentation, or better known as subcontracting, is
+                primarily outsourcing of manpower on a skill requirement basis or
+                project completion basis for a limited period of time. Staffing
+                may be desired when there is a dynamic requirement of people, or
+                there is a requirement of skilled staff, or the requirement is for
+                a limited period.</p>
+        </div>
+  </div>
+{% endblock body %}
